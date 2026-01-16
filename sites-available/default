@@ -50,8 +50,8 @@ server {
 		  #try_files $uri $uri/ /index.html;
 		  #}
         # Redirect /search-by-photo to external service
-        location /search-by-photo {
-        proxy_pass http://13.236.136.21:4173;
+    location / {
+        proxy_pass http://localhost:4173;
         
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
